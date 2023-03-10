@@ -4,7 +4,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
-import 'package:clean_architecture/core/platform/network_info.mocks.dart';
+import 'package:clean_architecture/core/network/network_info.mocks.dart';
 import 'package:clean_architecture/features/number_trivia/data/datasources/number_trivia_local_data_source.mocks.dart';
 import 'package:clean_architecture/features/number_trivia/data/datasources/number_trivia_remote_data_source.mocks.dart';
 import 'package:clean_architecture/features/number_trivia/data/models/number_trivia_model.dart';
