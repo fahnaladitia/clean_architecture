@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import '../../../../core/error/exceptions.dart';
 import 'package:mockito/annotations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../../core/error/exceptions.dart';
 import '../models/number_trivia_model.dart';
 
 @GenerateNiceMocks([MockSpec<NumberTriviaLocalDataSource>()])
