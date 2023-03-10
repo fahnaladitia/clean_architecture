@@ -1,5 +1,6 @@
-import '../models/number_trivia_model.dart';
 import 'package:mockito/annotations.dart';
+
+import '../models/number_trivia_model.dart';
 
 @GenerateNiceMocks([MockSpec<NumberTriviaLocalDataSource>()])
 abstract class NumberTriviaLocalDataSource {
