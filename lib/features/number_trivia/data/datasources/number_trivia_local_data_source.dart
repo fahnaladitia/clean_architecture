@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:clean_architecture/core/error/exceptions.dart';
+import '../../../../core/error/exceptions.dart';
 import 'package:mockito/annotations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

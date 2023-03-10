@@ -1,5 +1,5 @@
-import 'package:clean_architecture/core/error/exceptions.dart';
-import 'package:clean_architecture/features/number_trivia/data/models/number_trivia_model.dart';
+import '../../../../core/error/exceptions.dart';
+import '../models/number_trivia_model.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../../core/error/failures.dart';
