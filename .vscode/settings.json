@@ -1,0 +1,12 @@
+{
+    "editor.wordWrap": "wordWrapColumn",
+    "diffEditor.wordWrap": "inherit",
+    "explorer.fileNesting.enabled": false,
+    "prettier.jsxSingleQuote": false,
+    "prettier.singleAttributePerLine": false,
+    "prettier.singleQuote": false,
+    "explorer.autoReveal": true,
+    "workbench.editor.openSideBySideDirection": "right",
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": true
+}
