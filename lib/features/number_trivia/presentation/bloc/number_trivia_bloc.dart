@@ -1,13 +1,12 @@
-import 'package:bloc/bloc.dart';
-import '../../domain/usecases/get_concrete_number_trivia.dart';
-import '../../domain/usecases/get_random_number_trivia.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 
+import '../../../../core/error/failures.dart';
 import '../../../../core/utils/input_converter.dart';
 import '../../domain/entities/number_trivia.dart';
-
-import '../../../../core/error/failures.dart';
+import '../../domain/usecases/get_concrete_number_trivia.dart';
+import '../../domain/usecases/get_random_number_trivia.dart';
 
 part 'number_trivia_event.dart';
 part 'number_trivia_state.dart';
@@ -30,13 +29,13 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
     on<GetTriviaForConcreteNumber>((event, emit) async {
       emit(NumberTriviaLoading());
       final inputEither = inputConverter.stringToUnsignedInteger(event.number);
-      inputEither.fold(
+      await inputEither.fold(
         (failure) async {
           if (failure is InvalidInputFailure) {
             emit(const NumberTriviaError(message: kInvalidFailureMessage));
           }
         },
-        (number) => _fetchNumberTrivia(
+        (number) async => await _fetchNumberTrivia(
           () => getConcreteNumberTrivia(Params(number: number)),
           emit,
         ),

@@ -10,11 +10,16 @@ class NumberTriviaPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Number Trivia'),
+    return GestureDetector(
+      onTap: () {
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Number Trivia'),
+        ),
+        body: buildBody(),
       ),
-      body: buildBody(),
     );
   }
 
@@ -47,20 +52,7 @@ class NumberTriviaPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               // Bottom half
-              Column(
-                children: [
-                  // TextField
-                  const Placeholder(fallbackHeight: 40),
-                  const SizedBox(height: 10),
-                  Row(
-                    children: const [
-                      Expanded(child: Placeholder(fallbackHeight: 30)),
-                      SizedBox(width: 10),
-                      Expanded(child: Placeholder(fallbackHeight: 30)),
-                    ],
-                  )
-                ],
-              )
+              const TriviaControls()
             ],
           ),
         ),

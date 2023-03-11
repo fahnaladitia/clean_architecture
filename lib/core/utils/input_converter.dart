@@ -1,6 +1,7 @@
-import '../error/failures.dart';
 import 'package:dartz/dartz.dart';
 import 'package:mockito/annotations.dart';
+
+import '../error/failures.dart';
 
 @GenerateNiceMocks([MockSpec<InputConverter>()])
 class InputConverter {
