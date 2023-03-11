@@ -73,9 +73,7 @@ void main() {
     test('should get data from the concrete use case', () async {
       // arrange
       setUpMockInputConverterSuccess();
-      when(mockGetConcreteNumberTrivia(any))
-          .thenAnswer((_) async => const Right(tNumberTrivia));
-
+      // act
       bloc.add(const GetTriviaForConcreteNumber(number: tNumberString));
       await untilCalled(mockGetConcreteNumberTrivia(any));
       // assert
