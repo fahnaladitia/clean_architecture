@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import '../../../../core/error/exceptions.dart';
 import 'package:http/http.dart' as http;
 import 'package:mockito/annotations.dart';
 
+import '../../../../core/error/exceptions.dart';
 import '../models/number_trivia_model.dart';
 
 @GenerateNiceMocks([MockSpec<NumberTriviaRemoteDataSource>()])
